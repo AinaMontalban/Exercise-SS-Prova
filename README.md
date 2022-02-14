@@ -10,8 +10,8 @@ Creating a dendrogram and principal component analysis of gene expression profil
 
 ## Repository content
 
-* The [exercise_SS_report.pdf](https://github.com/AinaMontalban/Exercise-SS-Prova/blob/main/exercise_SS_report.pdf) contains the code and the results of the exercise
-* The [exercise_SS_report.html](https://github.com/AinaMontalban/Exercise-SS-Prova/blob/main/exercise_SS_report.html) contain the same as the [PDF file](https://github.com/AinaMontalban/Exercise-SS-Prova/blob/main/exercise_SS_report.pdf) but in _HTML_ format
+* The [exercise_SS_report.pdf](https://github.com/AinaMontalban/Exercise-SS-Prova/blob/main/exercise_ss_report.pdf) contains the code and the results of the exercise
+* The [exercise_SS_report.html](https://github.com/AinaMontalban/Exercise-SS-Prova/blob/main/exercise_ss_report.html) contain the same as the [PDF file](https://github.com/AinaMontalban/Exercise-SS-Prova/blob/main/exercise_ss_report.pdf) but in _HTML_ format
 
 * The [results](https://github.com/AinaMontalban/Exercise-SS-Prova/tree/main/results) folder contains:
     + The [images](https://github.com/AinaMontalban/Exercise-SS-Prova/tree/main/results/images) folder with the dendogram and the PCA plot 
