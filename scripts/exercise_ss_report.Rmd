@@ -90,13 +90,12 @@ To continue with our analysis, we will import the __.CEL files__ and create an a
 To read the .CEL files, we need to specify the path of the files:
 
 ```{r message=FALSE, warning=FALSE}
-CELfiles_fullName <- list.celfiles(file.path(data_dir), full.names=TRUE) # store the full path
+CELfiles_fullName <- list.celfiles(file.path(data_dir), full.names=TRUE) # save the full path
 ```
 
 Once we have obtain the list of the names of the .CEL files, we can read them using the function _read.celfiles()_ from the _oligo_ package:
 
 ```{r message=FALSE, warning=FALSE, results='hide'}
-# store a variable name raw data as the data is not normalized
 raw_data <- read.celfiles(CELfiles_fullName)
 ```
 We change the sample names to obtain the names without the file extension .CEL
@@ -149,7 +148,7 @@ targets$shortName <- c(rep("advanced_SS", 2), rep("control", 4),
 We can write a CSV file with the phenotype data:
 
 ```{r}
-# store a CSV file
+# write a CSV file
 write.csv(targets, file.path(data_dir, "targets.csv"), row.names = FALSE)
 ```
 
@@ -243,7 +242,7 @@ p1 <- p1 + geom_text(data = label(dend_data),
 p1
 ```
 ```{r include=FALSE}
-png(file.path(results_dir, "images/dendrogram.png"))
+pdf(file.path(results_dir, "images/dendrogram.pdf"))
 print(p1)
 dev.off()
 ```
@@ -298,7 +297,7 @@ As we have seen in the dendrogram, the control samples are closer as well as the
 
 
 ```{r include=FALSE}
-png(file.path(results_dir, "images/pca.png"))
+pdf(file.path(results_dir, "images/pca.pdf"))
 print(p2)
 dev.off()
 ```

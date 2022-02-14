@@ -23,11 +23,10 @@ library(ggdendro)
 
 
 ## ----message=FALSE, warning=FALSE---------------------------------------------------------------
-CELfiles_fullName <- list.celfiles(file.path(data_dir), full.names=TRUE) # store the full path
+CELfiles_fullName <- list.celfiles(file.path(data_dir), full.names=TRUE) # save the full path
 
 
 ## ----message=FALSE, warning=FALSE, results='hide'-----------------------------------------------
-# store a variable name raw data as the data is not normalized
 raw_data <- read.celfiles(CELfiles_fullName)
 
 
@@ -39,14 +38,9 @@ sampleNames <- sub(".CEL.gz$", "", name_sample)
 sampleNames(raw_data) <- sampleNames
 
 
-## ----eval=FALSE---------------------------------------------------------------------------------
-## gse <- getGEO(filename = file.path(data_dir, "GSE23117_series_matrix.txt.gz"),
-##               GSEMatrix = FALSE)
-
-
-## ----include=FALSE------------------------------------------------------------------------------
-gse <- readRDS(file.path(data_dir, "my_gse.rds")) # used bc of a problem in getGEO function
-
+## ----------------------------------------------------------------------------------------------
+ gse <- getGEO(filename = file.path(data_dir, "GSE23117_series_matrix.txt.gz"),
+              GSEMatrix = FALSE)
 
 ## -----------------------------------------------------------------------------------------------
 pheno_data <- pData(phenoData(gse))
@@ -61,7 +55,7 @@ targets$shortName <- c(rep("advanced_SS", 2), rep("control", 4),
 
 
 ## -----------------------------------------------------------------------------------------------
-# store a CSV file
+# write a CSV file
 write.csv(targets, file.path(data_dir, "targets.csv"), row.names = FALSE)
 
 
@@ -118,7 +112,7 @@ p1 <- p1 + geom_text(data = label(dend_data),
 p1
 
 ## ----include=FALSE------------------------------------------------------------------------------
-png(file.path(results_dir, "images/dendrogram.png"))
+pdf(file.path(results_dir, "images/dendrogram.pdf"))
 print(p1)
 dev.off()
 
@@ -154,8 +148,9 @@ p2 <- p2 + theme_classic() + labs(x=c(paste("PC1 (",loads[1],"%)")),
 p2 <- p2 + geom_text_repel(show.legend = FALSE)
 p2
 
+
 ## ----include=FALSE------------------------------------------------------------------------------
-png(file.path(results_dir, "images/pca.png"))
+pdf(file.path(results_dir, "images/pca.pdf"))
 print(p2)
 dev.off()
 
