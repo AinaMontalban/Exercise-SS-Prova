@@ -1,4 +1,4 @@
-# Exercise Gene Expression - Sjogren Syndrom
+# Exercise Gene Expression - Sjogren's Syndrom
 
 ## Author
 
