@@ -18,7 +18,7 @@ Creating a dendrogram and principal component analysis of gene expression profil
 * The [scripts](https://github.com/AinaMontalban/Exercise-SS-Prova/tree/main/scripts) folder contains:
 	+ The Rmarkdown that builds the html file and pdf file
 	+ The R script from the Rmarkdown
-* The[data](https://github.com/AinaMontalban/Exercise-SS-Prova/tree/main/data) folder contains:
+* The [data](https://github.com/AinaMontalban/Exercise-SS-Prova/tree/main/data) folder contains:
 	+ CEL files of the 15 samples
 	+ targets.csv: created csv file from the phenotype data 
 
